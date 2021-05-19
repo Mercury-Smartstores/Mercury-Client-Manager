@@ -1,27 +1,24 @@
 # Mercury Client Manager
 
-This package contains the code to create a Node.js server for the communication with the customers of Mercury Smart Store
-
-### 🎨 Layout preview
-
-TODO: Layout pictures, include gif images for different actions
+This package contains the code to create a Node.js server with Express for the communication with the customers of Mercury Smart Store. It will open a TCP/IP communication with [Mercury iOS App](https://github.com/Mercury-Smartstores/Mercury-iOS-App) and exchange messages by using [Socket.IO](https://socket.io/). Those messages will introduce updates in the shopping cart and inform about the situation of the customer: entering the shop or exiting the shop.
 
 ### 🔧 Installation
 
-TODO: How to use this package?
-
-### ⚙️ Running Tests 
-
-TODO: How to run tests for this package?
+In order to install the dependencies for Socket.IO and Express, just move to the package and execute
+```
+npm install
+```
 
 ### 📦 Deploying 
 
-TODO: How to deploy the app?
-
+You can deploy the server (at localhost:3000, although you can change the port and host) by running
+```
+node server.js
+```
 
 ### 📄 License 
 
-TODO: Link to the License in the repo
+This repository is licensed under the [MIT License](LICENSE).
 
 ### ♦️ About Mercury
 
