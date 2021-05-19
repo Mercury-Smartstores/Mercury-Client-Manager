@@ -17,8 +17,7 @@ httpServer.listen(process.env.PORT || 3000, () => console.log('Server is running
 io.on('connection', (socket) => {
     connections.push(socket);
     console.log('Connecting...%s clients are connected', connections.length);
-
-    // Disconnect
+    
     socket.on('disconnect', data => {
         connections.splice(connections.indexOf(socket), 1);
         console.log('Disconnecting...%s clients are connected', connections.length);
@@ -27,12 +26,17 @@ io.on('connection', (socket) => {
     
     socket.on('add item', data => {
         console.log("Received \'send item\' message: ", data);
-        socket.emit('add item', {name: 'Watermelon', price: '1.45', image: base64_encode('assets/watermelon.png')});
+        socket.emit('add item', {name: 'Orange', price: '0.45', image: base64_encode('assets/orange.png')}); // Example
     });
 
     socket.on('remove item', data => {
-        console.log("Received \'send item\' message: ", data);
-        socket.emit('remove item', {name: 'Watermelon', price: '1.45'});
+        console.log("Received \'remove item\' message: ", data);
+        socket.emit('remove item', {name: 'Orange', price: '0.45'}); // Example
+    });
+
+    socket.on('exit store', data => {
+        console.log("Received \'exit store\' message: ", data);
+        socket.emit('exit store');
     });
 });
 
