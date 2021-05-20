@@ -23,7 +23,6 @@ io.on('connection', (socket) => {
         console.log('Disconnecting...%s clients are connected', connections.length);
     });
 
-    
     socket.on('add item', data => {
         console.log("Received \'send item\' message: ", data);
         socket.emit('add item', {name: 'Orange', price: '0.45', image: base64_encode('assets/orange.png')}); // Example
@@ -32,6 +31,11 @@ io.on('connection', (socket) => {
     socket.on('remove item', data => {
         console.log("Received \'remove item\' message: ", data);
         socket.emit('remove item', {name: 'Orange', price: '0.45'}); // Example
+    });
+
+    socket.on('request explanation', data => {
+        console.log("Received \'request explanation\' message: ", data);
+        // TODO: send video
     });
 
     socket.on('exit store', data => {
