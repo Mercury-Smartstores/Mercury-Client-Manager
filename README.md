@@ -13,7 +13,7 @@ npm install
 
 You can deploy the server (at localhost:3000, although you can change the port and host) by running
 ```
-node server.js
+npm start
 ```
 
 ### 📄 License 
