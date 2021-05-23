@@ -5,18 +5,20 @@ This package contains the code to create a Node.js server with Express for the c
 ### 🔧 Installation
 
 In order to install the dependencies for Socket.IO and Express, just move to the package and execute
+
 ```
 npm install
 ```
 
-### 📦 Deploying 
+### 📦 Deploying
 
 You can deploy the server (at localhost:3000, although you can change the port and host) by running
+
 ```
 npm start
 ```
 
-### 📄 License 
+### 📄 License
 
 This repository is licensed under the [MIT License](LICENSE).
 

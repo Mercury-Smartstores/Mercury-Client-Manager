@@ -20,5 +20,8 @@
   "dependencies": {
     "express": "*",
     "socket.io": "*"
+  },
+  "devDependencies": {
+    "prettier": "2.2.1"
   }
 }
